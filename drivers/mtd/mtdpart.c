@@ -673,6 +673,7 @@ int parse_mtd_partitions(struct mtd_info *master, const char *const *types,
 			ret = mtd_part_do_parse(parser, master, &pparts, data);
 			if (ret <= 0)
 				mtd_part_parser_put(parser);
+			return 0;
 		}
 		/* Found partitions! */
 		if (ret > 0) {
